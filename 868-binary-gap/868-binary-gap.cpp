@@ -4,7 +4,7 @@ public:
         int count=0;
         int m = INT_MIN;
         while(n!=0){
-            if(n%2==1){
+            if((n&1)==1){
                 count = max(m,count);
                 m =0;
             }
