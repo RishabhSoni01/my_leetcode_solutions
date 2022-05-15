@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        int min_so_far =INT_MAX;
+        int min_so_far =10000000;
         int max_profit=0;
         int n=prices.size();
         for(int i=0;i<n;i++){
