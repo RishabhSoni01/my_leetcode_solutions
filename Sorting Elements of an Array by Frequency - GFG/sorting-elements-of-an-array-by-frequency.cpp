@@ -22,7 +22,7 @@ class Solution{
         }
         while(!maxh.empty()){
             int freq = maxh.top().first,val = maxh.top().second;
-            while(freq--){
+            for(int i=0;i<abs(freq);i++){
                 ans.push_back(-1*val);
             }
             maxh.pop();
