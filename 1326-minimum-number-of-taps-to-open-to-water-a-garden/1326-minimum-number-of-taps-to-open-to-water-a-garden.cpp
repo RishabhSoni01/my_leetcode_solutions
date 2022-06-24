@@ -4,10 +4,12 @@ public:
         int min=0;
         int max=0;
         int count=0;
+        int index=0;
         while(max<n){
-            for(int i=0;i<ranges.size();i++){
+            for(int i=index;i<ranges.size();i++){
                 if((i - ranges[i])<=min && (i + ranges[i])>max){
                     max = i + ranges[i];
+                    index=i;
                 }
                 //here after one loop we have 2--5 and open a 2nd tab;
                 //other loop give 5--6
