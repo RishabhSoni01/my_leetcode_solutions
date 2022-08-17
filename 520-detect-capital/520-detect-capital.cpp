@@ -1,27 +1,19 @@
 class Solution {
 public:
-    bool detectCapitalUse(string word) {
-        if(word[0] >= 'A' && word[0] <= 'Z')
-            return (alllower(word.substr(1)) || allupper(word.substr(1)));
-        else
-            return alllower(word.substr(1));
-            
-    }
-    
-    bool alllower(string word)
-    {
-        for(char ch : word)
-            if(ch >= 'A' && ch <= 'Z')
-                return false;
-            
-        return true;
-    }
-        
-    bool allupper(string word)
-    {
-        for(char ch : word)
-            if(ch >= 'a' && ch <= 'z')
-                return false;
-        return true;
+    string capitalizeTitle(string title) {
+        int end=0;
+        int n=title.size();
+        while(end<n){
+            int start=end;
+            while(end<n & title[end]!=32){
+                title[end]=tolower(title[end]);
+                end++;
+            }
+            if(end-start>2){
+                title[start]=toupper(title[start]);
+            }
+            end++;
+        }
+        return title;
     }
 };
