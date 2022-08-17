@@ -4,10 +4,7 @@ public:
         int ans=0;
         int count=0;
         for(int i=0;i<s.size();i++){
-            if(s[i]=='L'){
-                count+=1;
-            }
-            else{count-=1;}
+            count+=s[i]=='L'?+1:-1;
             if(count==0)ans+=1;
         }
         return ans;
