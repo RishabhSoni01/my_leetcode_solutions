@@ -8,7 +8,7 @@ public:
         for(int i=0;i<s.size();i++){
             if(m[s[i]]==1){
                 return i;
-                break;
+                
             }
         }
         return -1;
