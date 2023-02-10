@@ -14,7 +14,7 @@ public:
                 }
             }
         }
-        if(q.size()>=n*n){
+        if(q.size()>=n*m){
             return -1;
         }
         
